@@ -208,13 +208,27 @@ progress::-webkit-progress-bar {
 }
 
 footer {
-  height: 20vh;
+  height: 15vh;
   padding: 0 8em;
   background: #7f5539;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+button {
+  background: none;
+  color: #a9a9a9;
+  padding: 1em 1.5em;
+  border: 2px solid #a9a9a9;
+  transition: all 0.25s;
+}
+button:hover {
+  color: white;
+  border-color: #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-0.25m);
+  cursor: pointer;
 }
 @media (max-width: 900px) {
   .top {
