@@ -12,13 +12,16 @@ li {
   padding: 0;
   color: #fcfcfc;
 }
+
 p {
   color: #a5a58d;
 }
+
 h2 {
   color: #cb997e;
   font-weight: 700;
 }
+
 a {
   text-decoration: none;
   color: #fcfcfc;
@@ -27,6 +30,7 @@ a:visited {
   color: #fcfcfc;
   text-decoration: none;
 }
+
 li.lan a {
   font-size: 0.5em;
 }
@@ -67,6 +71,7 @@ nav.scroll li {
   display: flex;
   justify-content: space-evenly;
 }
+
 .top {
   width: 100%;
   height: 85vh;
@@ -77,6 +82,7 @@ nav.scroll li {
   justify-content: flex-end;
   align-items: center;
 }
+
 .leftfloat {
   padding-right: 10em;
 }
@@ -98,6 +104,7 @@ nav.scroll li {
   font-weight: 400;
   border-bottom: 1px solid #eeeeee;
 }
+
 .icons {
   font-size: 1.5em;
   display: flex;
@@ -216,6 +223,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 button {
   background: none;
   color: #a9a9a9;
@@ -223,8 +231,9 @@ button {
   border: 2px solid #a9a9a9;
   transition: all 0.25s;
 }
+
 button:hover {
-  color: white;
+  color: rgb(242, 159, 16);
   border-color: #f1ff5c;
   box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
   transform: translateY(-0.25m);
