@@ -170,6 +170,9 @@ label {
   text-shadow: #595858 0 0.5px 0.5px;
 }
 
+.introhead {
+  border: 1px solid white;
+}
 footer {
   height: 15vh;
   padding: 0 8em;
