@@ -16,16 +16,23 @@ li {
 
 p {
   color: #778da9;
+  font-size: 1.1em;
+  line-height: 2em;
 }
 
 h1 {
   color: #1b263b;
   font-weight: 700;
   font-size: 2em;
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: transitionIn 300ms ease-in 1s;
+  animation-fill-mode: forwards;
 }
 h2 {
   color: #415a77;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  padding-bottom: 1em;
 }
 
 a {
@@ -57,6 +64,7 @@ nav {
   position: fixed;
   text-decoration: none;
   transition: all 0.5s ease-out;
+  z-index: 1;
 }
 
 nav.scroll {
@@ -135,12 +143,26 @@ nav.scroll a {
   transform: translateY(-0.25m);
   cursor: pointer;
 }
+.introhead {
+  border: 4px solid #415a77;
+  border-radius: 25px;
+  box-shadow: 0 0.4em 0.4em 0.1em #bdbdbd;
+  width: 65%;
+  margin: 0 auto;
+  padding: 4em auto;
+  transform: translateY(-30%);
+  z-index: -1;
+  background: #ffffff;
+}
 
+.aboutme {
+  width: 60%;
+  margin: 0 auto;
+}
 .about,
 .myproject {
   height: 85vh;
-  padding: 0 8em;
-  animation: transitionIn 0.9s;
+  padding: 0 10em;
 }
 
 label {
@@ -170,9 +192,6 @@ label {
   text-shadow: #595858 0 0.5px 0.5px;
 }
 
-.introhead {
-  border: 1px solid white;
-}
 footer {
   height: 15vh;
   padding: 0 8em;
@@ -195,6 +214,7 @@ button:hover {
   color: rgb(242, 159, 16);
   border-color: #f1ff5c;
   box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  border-radius: 20px;
   transform: translateY(-0.25m);
   cursor: pointer;
 }
@@ -209,10 +229,10 @@ button:hover {
 @keyframes transitionIn {
   from {
     opacity: 0;
-    transform: rotateX(-10deg);
+    transform: rotateX(-20deg);
   }
   to {
-    opacity: 1;
     transform: rotateX(0);
+    opacity: 1;
   }
 }
