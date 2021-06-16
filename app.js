@@ -1,4 +1,26 @@
 const links = document.querySelectorAll("body ul li a");
+let revealerpoint = 150;
+
+window.addEventListener("scroll", reveal);
+reveal();
+
+function reveal() {
+  console.log("scrolling");
+  let revealers = document.querySelectorAll("h1");
+  for (var i = 0; i < revealers.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealertop = revealers[i].getBoundingClientRect().top;
+    var revealerbottom = revealers[i].getBoundingClientRect().bottom;
+    if (revealertop < windowheight - revealerpoint) {
+      revealers[i].classList.add("active");
+    } else {
+      revealers[i].classList.remove("active");
+    }
+    if (revealerbottom < 0 + revealerpoint) {
+      revealers[i].classList.remove("active");
+    }
+  }
+}
 
 for (const link of links) {
   link.addEventListener("click", clickHandler);
