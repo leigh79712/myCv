@@ -1,12 +1,12 @@
 const links = document.querySelectorAll("body ul li a");
-let revealerpoint = 150;
+let revealerpoint = 140;
 
 window.addEventListener("scroll", reveal);
 reveal();
 
 function reveal() {
   console.log("scrolling");
-  let revealers = document.querySelectorAll("h1");
+  let revealers = document.querySelectorAll(".loading");
   for (var i = 0; i < revealers.length; i++) {
     var windowheight = window.innerHeight;
     var revealertop = revealers[i].getBoundingClientRect().top;
