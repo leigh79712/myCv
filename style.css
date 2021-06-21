@@ -8,9 +8,6 @@ body {
 
 .active {
   opacity: 1;
-  /* animation-name: transitionIn;
-  animation-fill-mode: forwards;
-  animation-duration: 1s; */
 }
 
 ul,
@@ -18,11 +15,12 @@ li {
   display: inline;
   margin: 0;
   padding: 0;
-  color: #fcfcfc;
+  color: #9ad1d4;
 }
 
 p {
-  color: #778da9;
+  /* color: #778da9; */
+  color: #ead2ac;
   font-size: 1.1em;
   line-height: 2em;
 }
@@ -45,10 +43,10 @@ h2 {
 a {
   padding: 25px;
   text-decoration: none;
-  color: #fcfcfc;
+  color: #07393c;
 }
 a:visited {
-  color: #fcfcfc;
+  color: #07393c;
   text-decoration: none;
 }
 
@@ -61,7 +59,7 @@ nav {
   padding: 0;
   font-family: "Dosis", sans-serif;
   font-weight: 700;
-  height: 2.5em;
+  height: 2.6em;
   width: 100%;
   font-size: 1.5em;
   text-transform: uppercase;
@@ -80,7 +78,13 @@ nav.scroll {
 }
 
 nav.scroll a {
+  padding-bottom: 16px;
   color: #415a77;
+}
+
+nav a:hover {
+  background: #03c4fa3a;
+  transition: all 0.3s ease-in;
 }
 
 .info {
@@ -93,16 +97,21 @@ nav.scroll a {
 .top {
   width: 100%;
   height: 90vh;
-  background: no-repeat url("./imgs/firstpage.jpeg");
-  background-size: 100%;
-  background-position: 0% 55%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
+}
+.rightfloat {
+  background: no-repeat url("./imgs/firstpage.jpeg");
+  background-size: 110%;
+  width: 100%;
+  height: 100%;
+  background-position: 0% 55%;
 }
 
 .leftfloat {
   padding-right: 10em;
+  margin-left: 4em;
 }
 
 .leftfloat h1 {
@@ -131,16 +140,16 @@ nav.scroll a {
 }
 .icons a:hover {
   padding-bottom: 10px;
-  background: #fc5c7d; /* fallback for old browsers */
+  background: #2bc0e4; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
-    #6a82fb,
-    #fc5c7d
+    #eaecc6,
+    #2bc0e4
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to bottom,
-    #6a82fb,
-    #fc5c7d
+    #eaecc6,
+    #2bc0e4
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   background-clip: text;
@@ -150,25 +159,46 @@ nav.scroll a {
   transform: translateY(-0.25m);
   cursor: pointer;
 }
-.introhead {
-  border: 4px solid #415a77;
-  border-radius: 25px;
-  box-shadow: 0 0.4em 0.4em 0.1em #bdbdbd;
-  width: 65%;
-  margin: 0 auto;
-  padding: 4em auto;
-  /* transform: translateY(-30%);
-  z-index: -1; */
-  /* background: #415a77; */
+
+.about,
+.skill {
+  padding: 0;
+  height: 75vh;
+  /* width: 100%; */
 }
 
-.aboutme {
-  width: 60%;
-  margin: 0 auto;
+.aboutleft {
+  width: 50%;
+  height: 100%;
+  float: left;
 }
-.about,
+.aboutright {
+  width: 50%;
+  height: 110%;
+  float: right;
+  background: #4281a4;
+  z-index: -1;
+  transform: translateY(-10%);
+}
+
+.skillright {
+  width: 40%;
+  float: right;
+}
+.skillleft {
+  width: 60%;
+  height: 90%;
+  float: left;
+  background: #4281a4;
+  z-index: -2;
+  transform: scaleY(1.2) translateY(-10%);
+  position: absolute;
+}
+.skillfront {
+  z-index: -1;
+}
 .myproject {
-  height: 85vh;
+  height: 80vh;
   padding: 2em 10em;
 }
 
@@ -193,16 +223,16 @@ label {
 }
 
 .contacts p {
-  color: #a9a9a9;
+  color: #415a77;
   font-size: 1em;
   font-weight: 700;
-  text-shadow: #595858 0 0.5px 0.5px;
+  text-shadow: #5686ff 0 0.5px 0.5px;
 }
 
 footer {
   height: 15vh;
   padding: 0 8em;
-  background: #e0e1dd;
+  background: #4281a4;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -215,6 +245,7 @@ button {
   padding: 1em 1.5em;
   border: 2px solid #a9a9a9;
   transition: all 0.25s;
+  margin-top: 3em;
 }
 
 button:hover {
