@@ -194,9 +194,7 @@ nav a:hover {
   transform: scaleY(1.2) translateY(-10%);
   position: absolute;
 }
-.skillfront {
-  z-index: -1;
-}
+
 .myproject {
   height: 80vh;
   padding: 2em 10em;
