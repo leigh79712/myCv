@@ -7,10 +7,10 @@ reveal();
 function reveal() {
   console.log("scrolling");
   let revealers = document.querySelectorAll(".loading");
-  for (var i = 0; i < revealers.length; i++) {
-    var windowheight = window.innerHeight;
-    var revealertop = revealers[i].getBoundingClientRect().top;
-    var revealerbottom = revealers[i].getBoundingClientRect().bottom;
+  for (let i = 0; i < revealers.length; i++) {
+    let windowheight = window.innerHeight;
+    let revealertop = revealers[i].getBoundingClientRect().top;
+    let revealerbottom = revealers[i].getBoundingClientRect().bottom;
     if (revealertop < windowheight - revealerpoint) {
       revealers[i].classList.add("active");
     } else {
@@ -38,7 +38,7 @@ function clickHandler(e) {
 }
 
 window.onscroll = function() {
-  var nav = document.querySelector("#navbar");
+  const nav = document.querySelector("#navbar");
   if (this.scrollY <= 50) nav.className = "";
   else nav.className = "scroll";
 };

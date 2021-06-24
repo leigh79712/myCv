@@ -7,25 +7,6 @@ body {
   width: 100%;
 }
 
-.active {
-  opacity: 1;
-}
-
-ul,
-li {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  color: #9ad1d4;
-}
-
-p {
-  /* color: #778da9; */
-  color: #ead2ac;
-  font-size: 1.1em;
-  line-height: 2em;
-}
-
 h1 {
   color: #1b263b;
   font-weight: 700;
@@ -35,6 +16,29 @@ h1 {
 h2 {
   color: #415a77;
   font-size: 1.1em;
+}
+
+p {
+  /* color: #778da9; */
+  color: #ead2ac;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.about,
+.skill {
+  padding: 0;
+  height: 75vh;
+}
+
+/* =====================================
+nav */
+ul,
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: #9ad1d4;
 }
 
 a {
@@ -79,10 +83,8 @@ nav.scroll a {
   color: #415a77;
 }
 
-nav a:hover {
-  background: #03c4fa3a;
-  transition: all 0.3s ease-in;
-}
+/* ==============================================
+top */
 
 .info {
   flex: 1;
@@ -157,11 +159,8 @@ nav a:hover {
   cursor: pointer;
 }
 
-.about,
-.skill {
-  padding: 0;
-  height: 75vh;
-}
+/* ======================================
+about */
 
 .aboutleft {
   width: 45%;
@@ -187,36 +186,40 @@ nav a:hover {
   margin-top: 4em;
   padding-right: 4em;
 }
+
+/* ======================================
+skill */
+
 .skillright {
   width: 40%;
   position: absolute;
   right: 2em;
-  margin-top: 4em;
+  /* margin-top: 2em; */
 }
 .skillleft {
   width: 60%;
   height: 70%;
   float: left;
   background: #4281a4;
-  z-index: -2;
+  z-index: -1;
   transform: scaleY(1.2) translateY(-10%);
   position: absolute;
 }
+.skillfront {
+  text-align: center;
+}
+
+/* ========================================
+project */
 
 .myproject {
   height: 80vh;
   padding: 2em 10em;
 }
 
-label {
-  display: inline;
-  color: #cb997e;
-  font-weight: 700;
-}
+/* =======================================
+contacts */
 
-.myprojectleft div {
-  border: #6d6d6d solid 1px;
-}
 .contacts {
   height: 40vh;
   display: flex;
@@ -234,6 +237,8 @@ label {
   font-weight: 700;
   text-shadow: #5686ff 0 0.5px 0.5px;
 }
+/* ========================================
+footer */
 
 footer {
   height: 15vh;
@@ -245,6 +250,8 @@ footer {
   align-items: center;
 }
 
+/* ========================================
+button */
 button {
   background: none;
   color: #a9a9a9;
@@ -259,27 +266,28 @@ button:hover {
   border-color: #f1ff5c;
   box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
   border-radius: 20px;
-  transform: translateY(-0.25m);
+  transform: translateY(-0.25px);
   cursor: pointer;
 }
-
+/* ========================================
+img */
 img {
-  width: 3.5em;
-  height: 3.5em;
+  width: 5em;
+  height: 5em;
+  margin: 1em;
   padding: 1em 2em;
-}
-
-.imgs {
-  border: 2px solid #a9a9a9;
+  border: 3px solid #a9a9a9;
   border-radius: 4px;
   filter: grayscale(80%);
+  transition: all 0.3s ease-in;
 }
-.imgs:hover {
+img:hover {
   border-color: #f1ff5c;
   box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
   border-radius: 4px;
-  transform: translateY(-0.25m);
+  transform: translateY(-1px);
   cursor: pointer;
+  filter: none;
 }
 
 @media (max-width: 900px) {
@@ -288,6 +296,11 @@ img {
     background-size: 200%;
     height: 95vh;
   }
+}
+/* =================================================
+reveal */
+.active {
+  opacity: 1;
 }
 
 .revealme {
