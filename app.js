@@ -1,6 +1,7 @@
 const links = document.querySelectorAll("body ul li a");
 let revealerpoint = 140;
-
+// ======================================================
+// loading
 window.addEventListener("scroll", reveal);
 reveal();
 
@@ -21,7 +22,8 @@ function reveal() {
     }
   }
 }
-
+// ======================================================
+// 跳轉
 for (const link of links) {
   link.addEventListener("click", clickHandler);
 }
@@ -36,6 +38,7 @@ function clickHandler(e) {
     behavior: "smooth"
   });
 }
+// ======================================================
 
 window.onscroll = function() {
   const nav = document.querySelector("#navbar");

@@ -28,7 +28,7 @@ p {
 .about,
 .skill {
   padding: 0;
-  height: 75vh;
+  height: 80vh;
 }
 
 /* =====================================
@@ -91,6 +91,7 @@ top */
   max-width: 40%;
   display: flex;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 .top {
@@ -194,7 +195,7 @@ skill */
   width: 40%;
   position: absolute;
   right: 2em;
-  /* margin-top: 2em; */
+  margin-top: 5em;
 }
 .skillleft {
   width: 60%;
@@ -202,11 +203,18 @@ skill */
   float: left;
   background: #4281a4;
   z-index: -1;
-  transform: scaleY(1.2) translateY(-10%);
+  transform: scaleY(1.4) translateY(-5%);
   position: absolute;
 }
 .skillfront {
+  position: absolute;
+  width: 50%;
+  align-content: center;
+  justify-content: center;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* ========================================
