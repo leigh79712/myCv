@@ -224,6 +224,31 @@ project */
   height: 80vh;
   padding: 2em 10em;
 }
+/* ========================================== */
+/* comment */
+.message {
+  justify-items: center;
+
+  height: 70vh;
+}
+.letmeknow {
+  margin: auto 10%;
+}
+form {
+  display: grid;
+  /* justify-items: center; */
+  grid-template-columns: 30% 40%;
+  grid-template-rows: 30% 30% 30% 50%;
+  grid-row: 5 / span 2;
+  grid-column: 2 / span 2;
+  grid-row-gap: 1px;
+  grid-column-gap: 9px;
+}
+label {
+  color: #07393c;
+  font-size: 1.5em;
+  display: inline;
+}
 
 /* =======================================
 contacts */
