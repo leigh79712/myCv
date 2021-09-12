@@ -1,34 +1,41 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
   /* color: #a9a9a9; */
-  text-align: center;
   width: 100%;
 }
 
 h1 {
   color: #1b263b;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 h2 {
   color: #415a77;
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 p {
   /* color: #778da9; */
   color: #ead2ac;
-  font-size: 1.1em;
+  font-size: 1.5em;
   line-height: 2em;
 }
 
 .about,
 .skill {
   padding: 0;
-  height: 80vh;
+  height: 40em;
 }
 
 /* =====================================
@@ -51,8 +58,8 @@ a:visited {
   text-decoration: none;
 }
 
-li.languages a {
-  font-size: 0.5em;
+.languages {
+  font-size: 0.7em;
 }
 
 nav {
@@ -60,17 +67,21 @@ nav {
   padding: 0;
   font-family: "Dosis", sans-serif;
   font-weight: 700;
-  height: 2.6em;
+  height: 3em;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 2em;
   text-transform: uppercase;
-  display: flex;
   align-items: center;
-  justify-content: space-evenly;
   position: fixed;
   text-decoration: none;
   transition: all 0.5s ease-out;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
 }
 
 nav.scroll {
@@ -82,7 +93,28 @@ nav.scroll a {
   padding-bottom: 16px;
   color: #415a77;
 }
-
+.burger {
+  display: none;
+  cursor: pointer;
+  transition: all 0.5 ease;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  border-radius: 30px;
+  background-color: #07393c;
+  transition: transform 0.2s ease-out;
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
 /* ==============================================
 top */
 
@@ -101,21 +133,25 @@ top */
   justify-content: space-evenly;
   align-items: center;
 }
-.rightfloat {
-  background: no-repeat url("./imgs/firstpage.jpeg");
-  background-size: 110%;
+.leftfloat {
+  /* background-size: 110%; */
   width: 100%;
   height: 100%;
-  background-position: 0% 55%;
 }
-
-.leftfloat {
+#topPic {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rightfloat {
   padding-right: 10em;
   margin-left: 4em;
 }
 
-.leftfloat h1 {
-  font-size: 3.5em;
+.rightfloat h1 {
+  font-size: 4.5em;
   margin-top: 10px;
   margin-bottom: 0;
   letter-spacing: 0.4em;
@@ -124,7 +160,7 @@ top */
   text-align: left;
 }
 
-.leftfloat h2 {
+.rightfloat h2 {
   letter-spacing: 1px;
   text-shadow: #6d6d6d 1px 0 7px;
   padding: 1em 0;
@@ -134,7 +170,7 @@ top */
 }
 
 .icons {
-  font-size: 1.5em;
+  font-size: 2em;
   display: flex;
   justify-content: space-evenly;
 }
@@ -172,7 +208,7 @@ about */
 }
 .aboutright {
   width: 50%;
-  height: 110%;
+  height: 100%;
   float: right;
   background: #4281a4;
   z-index: -1;
@@ -184,8 +220,9 @@ about */
   z-index: 0;
   position: absolute;
   right: 2em;
-  margin-top: 4em;
+  margin: 4em 7em 0 0;
   padding-right: 4em;
+  max-width: 576px;
 }
 
 /* ======================================
@@ -199,22 +236,24 @@ skill */
 }
 .skillleft {
   width: 60%;
-  height: 70%;
+  height: 65%;
   float: left;
   background: #4281a4;
   z-index: -1;
-  transform: scaleY(1.4) translateY(-5%);
+  transform: scaleY(1.4) translateY(-8%);
   position: absolute;
 }
 .skillfront {
   position: absolute;
   width: 50%;
+  max-width: 800px;
   align-content: center;
   justify-content: center;
   text-align: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0 2em 0 11em;
 }
 
 /* ========================================
@@ -227,7 +266,7 @@ project */
 /* ========================================== */
 /* comment */
 .message {
-  height: 70vh;
+  height: 70%;
 }
 .letmeknow {
   margin: auto 20%;
@@ -276,7 +315,8 @@ textarea {
   overflow: auto;
   height: 100%;
   display: block;
-  margin: 2em 10% auto 10%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* =======================================
@@ -295,7 +335,7 @@ contacts */
 
 .contacts p {
   color: #415a77;
-  font-size: 1em;
+  font-size: 1.8em;
   font-weight: 700;
   text-shadow: #5686ff 0 0.5px 0.5px;
 }
@@ -321,6 +361,7 @@ button {
   border: 2px solid #a9a9a9;
   transition: all 0.25s;
   margin-top: 3em;
+  font-size: 1em;
 }
 
 button:hover {
@@ -332,18 +373,18 @@ button:hover {
   cursor: pointer;
 }
 /* ========================================
-img */
-img {
-  width: 5em;
-  height: 5em;
-  margin: 1em;
+icon */
+.icon {
+  width: 7em;
+  height: 7em;
+  margin: 2em;
   padding: 1em 2em;
   border: 3px solid #a9a9a9;
   border-radius: 4px;
   filter: grayscale(80%);
   transition: all 0.3s ease-in;
 }
-img:hover {
+.icon:hover {
   border-color: #f1ff5c;
   box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
   border-radius: 4px;
@@ -352,13 +393,265 @@ img:hover {
   filter: none;
 }
 
-@media (max-width: 900px) {
-  .top {
-    background-position: initial;
-    background-size: 200%;
-    height: 95vh;
+@media (max-width: 1440px) {
+  h1 {
+    color: #1b263b;
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+  h2 {
+    color: #415a77;
+    font-size: 1.2em;
+  }
+  nav {
+    height: 2.6em;
+    font-size: 1.5em;
+  }
+  #topPic {
+    object-position: left -70px top -10px;
+  }
+  .rightfloat h1 {
+    font-size: 3.5em;
+  }
+  .icons {
+    font-size: 1.5em;
+  }
+  .aboutfront {
+    margin: 4em 0 0 0;
+  }
+  .languages {
+    font-size: 0.5em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  /* =======================skill */
+  .skillleft {
+    height: 32em;
+  }
+  .skillfront {
+    max-width: 702px;
+    margin: 0 2em 0 3em;
+  }
+  .icon {
+    width: 5em;
+    height: 5em;
+  }
+  /* =====================contact */
+  .contacts p {
+    font-size: 1.2em;
+  }
+  .icon {
+    width: 5em;
+    height: 5em;
+    margin: 1.5em;
   }
 }
+@media (max-width: 1087px) {
+  .icon {
+    width: 4.5em;
+    height: 4.5em;
+    margin: 1em;
+    padding: 1em 2em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #topPic {
+    object-position: left -15 top -10px;
+  }
+  .rightfloat {
+    padding-right: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+  /* ========================================skill */
+  .skill {
+    height: 28em;
+  }
+  .skillleft {
+    height: 28em;
+  }
+
+  .icon {
+    width: 4em;
+    height: 4em;
+    margin: 1em;
+    padding: 1em 1em;
+  }
+  /* ======================================contact */
+  .contacts {
+    height: 20em;
+  }
+}
+@media screen and (max-width: 793px) {
+  /* =========================================nav */
+  .burger {
+    display: block;
+    margin-right: 2em;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 2.6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 38%;
+    transform: translateX(100%);
+    background-color: #ffffff;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .nav-links a {
+    opacity: 0;
+  }
+  /* =========================================top */
+
+  .rightfloat {
+    margin: 15px;
+    padding-right: 0;
+  }
+  .rightfloat h1 {
+    font-size: 3em;
+    margin: 20px 1em 0.5em 0.5em;
+    letter-spacing: 0.3em;
+  }
+  .rightfloat h2 {
+    letter-spacing: 1px;
+    font-size: 1.5em;
+  }
+  .icons {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  /* =============================================about */
+  .aboutfront {
+    margin-top: 2em;
+    padding-right: 2em;
+  }
+  /* =============================================skill */
+
+  .icon {
+    width: 3em;
+    height: 3em;
+    margin: 0.8em;
+    padding: 1em 1em;
+  }
+  .skillleft {
+    height: 25em;
+  }
+  /* ============================================contact */
+
+  .contacts p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 535px) {
+  .leftfloat {
+    display: none;
+  }
+  .top {
+    display: inline-block;
+    height: 25em;
+  }
+  .rightfloat {
+    background: #4281a4;
+    padding: 4em 5em 2em 5em;
+    text-align: left;
+    margin: 0;
+  }
+  .rightfloat h1 {
+    font-size: 4em;
+    margin-top: 5px;
+    margin-left: 0;
+  }
+  /* =================================about */
+  .about {
+    height: 50em;
+    padding: 0;
+    margin: 2em 0;
+  }
+  .aboutleft {
+    width: 100%;
+    height: 18em;
+    float: none;
+    text-align: center;
+    justify-content: center;
+  }
+  .aboutfront {
+    height: 20em;
+    width: 100%;
+    margin: 0;
+    background: #4281a4;
+    padding: 5.5em 0;
+    position: static;
+  }
+  .aboutfront p {
+    padding: 0 1em;
+  }
+  .aboutright {
+    display: none;
+  }
+  .btn {
+    margin-top: 15px;
+  }
+  /* ==================================skill */
+  .skill {
+    height: 50em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .skillright {
+    width: 100%;
+    height: 25em;
+    position: static;
+    right: 0;
+    padding-top: 2em;
+    margin: 3em 0;
+  }
+  .skillleft {
+    display: none;
+  }
+  .skillfront {
+    position: static;
+    background: #4281a4;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 4em 0;
+  }
+  /* =============================message */
+  .message h1 {
+    font-size: 1.5em;
+    padding: 0 1em;
+  }
+  /* =============================contact */
+  .contacts {
+    height: 18em;
+    flex-direction: column;
+    padding: 2em 0;
+    justify-content: space-evenly;
+  }
+
+  .contacts p {
+    font-size: 1em;
+  }
+}
+
 /* =================================================
 reveal */
 .active {
@@ -395,4 +688,15 @@ reveal */
 .active.revealme.fromleft {
   opacity: 1;
   transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

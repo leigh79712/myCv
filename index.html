@@ -19,28 +19,33 @@
   </head>
   <body id="body">
     <hearder>
-        <nav id="navbar" class="">
-          <ul>
-            <li><a href="#top"><i class="fas fa-home"></i> Home</a></li>
+        <nav id="navbar">
+         
+              <li class="scroll"><a href="#top"><i class="fas fa-home"></i> Home</a></li>
+              <div class="nav-links">
+                      <li class="scroll"><a href="#about">about</a></li>
+                      <li  class="scroll"><a href="#project">My porject</a></li>
+                   <li class="scroll"><a href="#contacts">contact</a></li>
+                   <div>
+                      <sup><a href="" class="languages">ch</a></sup><a>/</a>
+                      <a class="languages" href="">eng</a>
+                   </div>
+                        
           </ul>
-            <ul class="info">
-              <li><a href="#about">about</a></li>
-              <li><a href="#project">My porject</a></li>
-            </ul> 
-            <ul>
-              <li><a href="#contacts">contact</a></li>
-            </ul>
-            <ul>
-                <li class="languages"><sup><a href="/index_ch.html">ch</a></sup></li>
-                <li class="languages"><a  href="/index.html">eng</a></li>
-            </ul>
+        </div>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
           </nav>
     </hearder>
 
-    <section id="top" class="top show-on-scroll-left">
-      <div class="rightfloat">
+    <section id="top" class="top">
+      <div class="leftfloat">
+        <img id="topPic" src="./imgs/firstpage.jpeg" >
       </div>
-      <div class="leftfloat loading revealme fromright">
+      <div class="rightfloat loading revealme fromright">
         <h1>
           Jie Lin
         </h1>
@@ -64,93 +69,87 @@
         </ul>
       </div>
     </section>
-    
-    <section id="about" class="about">
-      <div class="aboutright">
-          
-      </div>
-      
-      <div>
-        <div class="aboutleft loading revealme fromleft">
-            <h1 class="">Intro</h1>
-            <h2>something anout me</h2>
-      </div>
-      <div class="aboutfront">
-          <div class="loading revealme fromright">
-              <p>
-                  Before starting front-end development, I worked in hospitality. I have a passion for both natural and computer languages, and I use both to bring elegant and responsive Web designs to life. Want to know more about it?
-                </p>
-           <button>Resume</button>
+      <section id="about" class="about">
+          <div class="aboutright">
+              
           </div>
-      </div>
-      
-    </section>
-
-    <section class ="skill">
-<div class="skillleft">
-
-</div>
-    <div class="skillfront loading revealme fromleft">
-      <img src="./imgs/html-5.png" alt="">
-      <img src="./imgs/css.png" alt="">
-      <img src="./imgs/javascript.png" alt="">
-      <img src="./imgs/physics.png" alt="">
-      <img src="./imgs/sass.png" alt="">
-      <img src="./imgs/nodejs.png" alt="">
-      <img src="./imgs/mongo.png" alt="">
-
-    </div>
+          
+          <div >
+            <div class="aboutleft loading revealme fromleft">
+                <h1 class="">Intro</h1>
+                <h2>something anout me</h2>
+          </div>
+          <div class="aboutfront">
+              <div class="loading revealme fromright">
+                  <p>
+                      Before starting front-end development, I worked in hospitality. I have a passion for both natural and computer languages, and I use both to bring elegant and responsive Web designs to life. Want to know more about it?
+                    </p>
+               <button class="btn">Resume</button>
+              </div>
+          </div>
+          
+        </section>
     
-    <div class="skillright"
-    ><div class="loading revealme fromleft">
-        <h1>Skill</h1>
-        <h2>The thing I know</h2>
-    </div>
-  </div>
-    </section>
-
-    <section id="project" class="myproject">
-      <div class="introhead ">
-          <h1>My Project</h1>
-          <h2>Something I build</h2>
+        <section class ="skill">
+             <div class="skillleft">
+             </div>
+            <div class="skillfront loading revealme fromleft">
+               <img class="icon" src="./imgs/html-5.png" alt="">
+               <img class="icon" src="./imgs/css.png" alt="">
+               <img class="icon" src="./imgs/javascript.png" alt="">
+               <img class="icon" src="./imgs/physics.png" alt="">
+               <img class="icon" src="./imgs/sass.png" alt="">
+               <img class="icon"src="./imgs/nodejs.png" alt="">
+               <img class="icon" src="./imgs/mongo.png" alt="">
+            </div>
+        <div class="skillright">
+          <div class="loading revealme fromleft">
+            <h1>Skill</h1>
+            <h2>The thing I know</h2>
+        </div>
       </div>
-      </div>
-    </section>
-
-    <section class="message">
-        <h1>
-            Let me know what's on your mind?
-        </h1>
-        <div class="letmeknow">
-            <form action="">
-                <input type="name" name="name" placeholder="Your Name" >
-                <input type="email" name="email" placeholder="E-mail">
-                <textarea name="text" placeholder="Message" rows="5" cols="75"></textarea>
-          <button class="submitform">Click!</button>
-              </form>
-        </div> 
-      
-    </section>
-      
-
-    <section id="contacts" class="contacts">
-      <p>Where to fine me</p>
-      <p>Location</br>
-      Lille, France</p>
-      <p>leigh79712@hotmail.com</p>
-      
-    </section>
-
-
-   
+        </section>
     
-    <footer>
-  
-    <p>
-      Designed by Leigh
-  </p>
-    </footer>
-
+        <section id="project" class="myproject">
+          <div class="introhead ">
+              <h1>My Project</h1>
+              <h2>Something I build</h2>
+          </div>
+          </div>
+        </section>
+    
+        <section class="message">
+            <h1>
+                Let me know what's on your mind?
+            </h1>
+            <div class="letmeknow">
+                <form action="">
+                    <input type="name" name="name" placeholder="Your Name" >
+                    <input type="email" name="email" placeholder="E-mail">
+                    <textarea name="text" placeholder="Message" rows="5" cols="75"></textarea>
+              <button class="submitform">Click!</button>
+                  </form>
+            </div> 
+          
+        </section>
+          
+    
+        <section id="contacts" class="contacts">
+          <p>Where to fine me</p>
+          <p>Location</br>
+          Lille, France</p>
+          <p>leigh79712@hotmail.com</p>
+          
+        </section>
+        
+        <footer>
+      
+        <p>
+          Designed by Leigh
+      </p>
+        </footer>
+    
+    
 
     <script type="text/javascript" src="app.js"></script>
   </body>
