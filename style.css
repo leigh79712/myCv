@@ -37,7 +37,6 @@ p {
   padding: 0;
   height: 40em;
 }
-
 /* =====================================
 nav */
 ul,
@@ -115,6 +114,7 @@ nav.scroll a {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+
 /* ==============================================
 top */
 
@@ -195,7 +195,6 @@ top */
   transform: translateY(-0.25m);
   cursor: pointer;
 }
-
 /* ======================================
 about */
 
