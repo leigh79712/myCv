@@ -1,4 +1,4 @@
-const links = document.querySelectorAll("body li a");
+const links = document.querySelectorAll("nav li a");
 
 const navslide = () => {
   const burger = document.querySelector(".burger");
@@ -13,8 +13,9 @@ const navslide = () => {
       if (link.style.animation) {
         link.style.animation = "";
       } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
-          0.7}s `;
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.7
+        }s `;
       }
     });
     //burger Tansition
@@ -31,7 +32,6 @@ window.addEventListener("scroll", reveal);
 reveal();
 
 function reveal() {
-  console.log("scrolling");
   let revealers = document.querySelectorAll(".loading");
   for (let i = 0; i < revealers.length; i++) {
     let windowheight = window.innerHeight;
@@ -60,12 +60,12 @@ function clickHandler(e) {
 
   scroll({
     top: offsetTop,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 }
 // ======================================================
 
-window.onscroll = function() {
+window.onscroll = function () {
   const nav = document.querySelector("#navbar");
   if (this.scrollY <= 50) nav.className = "";
   else nav.className = "scroll";

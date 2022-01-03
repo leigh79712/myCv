@@ -148,6 +148,7 @@ top */
 .rightfloat {
   padding-right: 10em;
   margin-left: 4em;
+  margin-bottom: 4em;
 }
 
 .rightfloat h1 {
@@ -374,8 +375,8 @@ button:hover {
 /* ========================================
 icon */
 .icon {
-  width: 7em;
-  height: 7em;
+  width: 5em;
+  height: 5em;
   margin: 2em;
   padding: 1em 2em;
   border: 3px solid #a9a9a9;
@@ -445,6 +446,24 @@ icon */
     width: 5em;
     height: 5em;
     margin: 1.5em;
+  }
+}
+@media (min-width: 1440px) {
+  .aboutright {
+    transform: scaleX(1.2) translateY(-5%) translateX(-9%);
+  }
+  .aboutfront {
+    margin: 4em 4em 0 0;
+  }
+  /*skill  */
+  .skill {
+    height: 35em;
+  }
+  .skillleft {
+    height: 35em;
+  }
+  .skillfront {
+    margin: 0 2em 0 5em;
   }
 }
 @media (max-width: 1087px) {
